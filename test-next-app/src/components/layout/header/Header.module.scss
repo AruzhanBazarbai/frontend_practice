@@ -1,0 +1,21 @@
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--titillium), sans-serif;
+
+    
+    width: 100%;
+    > a{
+       padding: 10px;
+       color:black;
+       margin: 0 10px;
+       transition: color .4s ease-in-out;
+   
+       &:hover,
+       &.active{
+           color:#c353c3;    
+       }
+       
+   }
+}
