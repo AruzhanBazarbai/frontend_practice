@@ -3,6 +3,7 @@ import { ICarData, ICarDataSingle } from '@/interfaces/car.interface'
 import { CarService } from '@/services/car.service'
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import { useRouter } from 'next/router'
+import { ParsedUrlQuery } from 'querystring'
 import React from 'react'
 
 type Props = {}
@@ -26,16 +27,28 @@ const CarDetailPage:NextPage<ICarDataSingle> = ({car}) => {
     <CarDetail car={car} />
     )
 }
-export const getStaticPaths: GetStaticPaths=async ()=>{
+interface Params extends ParsedUrlQuery{
+  id:string;
+}
+export const getStaticPaths: GetStaticPaths<Params>=async ()=>{
 
   const cars= await CarService.getAll()
   
-  return{
-    paths: cars.map(car=>{
+  return {
+    paths: cars.map(car=>({
       params:{
-        is:car.id
+        id:car.id.toString()
       }
-    }),
+    })),
+    fallback:'blocking'
+  }
+}
+export const getStaticProps: GetStaticProps<ICarDataSingle>=async ({params})=>{
+  const car= await CarService.getById(String(params?.id))
+
+  return{
+    props:{car},
+    revalidate:60,
   }
 }
 
