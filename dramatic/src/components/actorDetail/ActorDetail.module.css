@@ -1,0 +1,26 @@
+.actor_wrapper{
+    width:120px;
+}
+.actor_wrapper >img{
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid white;
+}
+.original{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+    margin-bottom: 0;
+}
+.charachter{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+
+    color: #A9A9A9;
+}

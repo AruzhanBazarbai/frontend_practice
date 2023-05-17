@@ -1,0 +1,32 @@
+.wrapper{
+    font-family: 'Montserrat';
+    margin: 60px 30px;
+    background: rgba(0,0,0,0.9);
+    
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    /* overflow-x: auto; */
+}
+.wrapper > div{
+    display: flex;
+    overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+
+.wrapper::-webkit-scrollbar {
+  width: 0.5em; /* Ширина ползунка */
+}
+
+.wrapper::-webkit-scrollbar-track {
+  background-color: transparent; /* Цвет фона */
+}
+
+.wrapper::-webkit-scrollbar-thumb {
+  background-color: transparent; /* Цвет ползунка */
+}
