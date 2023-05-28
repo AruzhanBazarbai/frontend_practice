@@ -7,25 +7,19 @@ import React, { FC, useEffect, useState } from 'react'
 import TodoAction from '@/components/todos/todoAction/TodoAction';
 import { useRouter } from 'next/router';
 import { ICategory } from '@/components/interfaces/category.interface';
-// import styles from './Home.module.css';
 
 const TodoPage:FC = () => {
   const router=useRouter();
   const ctgId:number=Number(router.query.id) || 0;
-  // console.log(ctgId);
   const [ctgList,setCtgList]=useState<ICategory[]>([])
   const [todoList, setTodoList]=useState<ITodo[]>([])
 
   // здесь я хотела синхронизировать данные между TodoPage и CategoryPage и поэтому решила в localStorage все сохранить в одном месте
   // и синхронизировать их между собой
-  // то есть сначала храню ctgList туда и здесь загружаю его и в элемент todoArr определенной категории сохраняю todoList отсюда и тем самым
-  // все данные будут на одном месте
-  // однако проблемы с localStorage и  useEffect
-  // почему то в localStorage записывается пустой массив хотя там были данные
+  // то есть сначала храню ctgList туда и здесь загружаю его и в элемент todoArr определенной категории сохраняю todoList отсюда и потом в ctgList меняю нужные элементы
     useEffect(()=>{
       // создала отдельный tempCtgList, потому что ctgList может не успеть обновиться до if блока
       const tempCtgList:ICategory[]=JSON.parse(localStorage.getItem('todoData') || '[]')
-      // setCtgList(JSON.parse(localStorage.getItem('todoData')  || '[]'));
       setCtgList(tempCtgList);
 
       // здесь используем значение временного массива и todoList ререндерим только если в tempCtgList что то есть
@@ -33,7 +27,6 @@ const TodoPage:FC = () => {
         const todos = tempCtgList[ctgId]?.todoArr || [];
         setTodoList(todos)
       }
-      console.log(ctgList);
     },[ctgId])
 
     // после полного обновления ctgList вызывается этот useEffect и только если в ctgList с индексом ctgId меняем в localStorage что то

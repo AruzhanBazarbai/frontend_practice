@@ -9,7 +9,7 @@ This is ToDo App, where you can:
 -view the number of completed todos
 -and all these data will be stored in localstorage, so data will not be delete after you close the window 
 
-To write this project I used Ts, Next.js and Tailwind. And include adaptive design. And work with localstorage and Link component
+To write this project I used TypeScript, Next.js and Tailwind. And include adaptive design. And work with localstorage and Link component
 
 The Main page is CategoryPage, where I added all the other components and wrote the main logic of the application as adding, deleting category, and link to category detail page where you can see the todo list of this category etc.
 
@@ -31,4 +31,4 @@ And there is ui element like Button, that wrappers TodoAction icons
 
 And interfaces like Meta, which describes props that FC of react will accept. I also created another interface-todo.interface.ts, but in the end it was not needed and I used the Props type to describe the accepted props by FC. Also created a category interface
 
-There are two pages
+There are two pages. Home page- categoryPage, detail page- todoPage

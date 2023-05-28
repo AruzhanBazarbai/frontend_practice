@@ -12,29 +12,25 @@ import { v4 as uuidv4 } from 'uuid';
 const CategoryPage:FC = () => {
   
     const [formVisible, setFormVisible]=useState(false)
-    // const [todoList, setTodoList]=useState<ITodo[]>([])
     const [ctgList,setCtgList]=useState<ICategory[]>([])
-    console.log(ctgList)
+    // этот стейт будет контролировать загрузка данных закончилась или нет
+    const [loading, setLoading]=useState(true)
     
     // из  localStorage берем данные и сохраняем в ctgList
+    // также меняем состояние loading на фолс
     useEffect(()=>{
-      console.log(ctgList)
       setCtgList(JSON.parse(localStorage.getItem('todoData')  || '[]'));
-      console.log(ctgList)
+      setLoading(false)
     },[])
-    
-    //  здесь только если меняется что то в ctgList записываем в localStorage
-    // однако я заметила что этот useEffect вызывается хотя ctgList в первом useEffect не успел полностью обновиться, и в localStorage 
-    // записывается пустой массив потому что ctgList еще не успел обновиться и является пустым
-    // хотя этот useEffect должен был вызваться только если ctgList обновился полностью
-    // не понимаю почему так себя ведет и поэтому здесь поставила проверку чтобы пустой массив не записывался но это тоже ошибочный подход,
-    // потому что бывают случаи где мы удаляем все категории
+    // второй useEffect будет вызываться только тогда когда ctgList поменяется
+    // сначала проверяем loading, если его значение поменялся то значит загрузка с localStorage завершена и ctgList успел поменяться
+    // и в localStorage не будет записываться пустой массив
+    // просто следить за асинхронными действиями стало сложно и поэтому добавила доп условие
     useEffect(()=>{
-      console.log(ctgList)
-      if(ctgList.length>0){
+      // if(ctgList.length>0){
+      if(!loading){
         localStorage.setItem('todoData',JSON.stringify(ctgList));
       }
-      console.log(ctgList)
     },[ctgList])
 
     // чтобы с помощью булеан значения контролировали видимость формы
@@ -53,8 +49,6 @@ const CategoryPage:FC = () => {
     function deleteCtgHandler(id:string){
       setCtgList(ctgList.filter((el)=>el.id!==id))
     }
-
-    console.log(ctgList)
 
     return (<div className=''>
     <Layout title="Category Page">
