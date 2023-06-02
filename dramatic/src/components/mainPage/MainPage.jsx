@@ -24,6 +24,8 @@ const MainPage = ({favorites,setFavorites}) => {
     setShow(!show);
   }
 
+  // console.log(topRatedFilms)
+  
   return (
     <div className={styles.body}>
       <div className={styles.main_wrapper}>

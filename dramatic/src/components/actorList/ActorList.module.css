@@ -1,19 +1,27 @@
-.body{
-    background: rgba(0,0,0,0.9);
-
+.actors_wrapper{
+    display: flex;
+   justify-content: space-between;
+    flex-direction: column;
 }
-.main_wrapper{
-    padding: 103px 0px 0px 100px;
-    /* margin-top: 200px; */
-    z-index: 100;
-    width: 100%;
-
+.actors{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 20px;
+    column-gap: 60px;
+}
+.actors_wrapper >p{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
 }
 .button_wrapper{
     display: flex;
     justify-content: center;
     align-items: center;
-    /* margin: 30px; */
+    margin: 30px;
 }
 .button{
 

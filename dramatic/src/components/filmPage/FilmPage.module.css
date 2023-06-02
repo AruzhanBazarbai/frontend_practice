@@ -1,9 +1,7 @@
 .body{
     background: rgba(0,0,0,0.9);
-
 }
 .main_wrapper{
-    padding: 100px;
-    /* margin-top: 200px; */
+    padding: 103px 0px 0px 100px;
     z-index: 100;
 }

@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from 'react';
 import './App.css';
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
-import { Header, Footer, Navbar, MainPage,FilmList, FilmPage } from './components';
+import { Header, Footer, Navbar, MainPage,FilmList, FilmPage, VideoDetail } from './components';
 import './utils/fonts.css';
 import { fetchFromAPI } from './utils/fetchFromAPI';
 
@@ -11,7 +11,6 @@ function App() {
   const [searchText,setSearchText]=useState("")
   const [searchResFilms, setSearchResFilms]=useState(null)
   const [favorites, setFavorites]=useState([])
-  // console.log(searchResFilms)
 
   useEffect(()=>{
     if(searchText){
@@ -49,8 +48,9 @@ function App() {
       <Routes>
         <Route exact path='/' element={<MainPage favorites={favorites} setFavorites={setFavorites} />} />
         <Route path='/films/:id' element={<FilmPage favorites={favorites} setFavorites={setFavorites} />} />
+        <Route path='/films/:id/play' element={<VideoDetail />} />
       </Routes>
-      <div ref={myRef} className='wrapper_search'>
+      <div ref={myRef} className='wrapper_search' >
         <FilmList favorites={favorites} setFavorites={setFavorites} films={searchResFilms} text={"SEARCH RESULTS"}/>
       </div>
       <Footer />

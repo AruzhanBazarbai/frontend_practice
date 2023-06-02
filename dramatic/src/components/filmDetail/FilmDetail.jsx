@@ -17,12 +17,12 @@ const FilmDetail = ({film,favorites, setFavorites}) => {
         setFavorites((!isFav)?[...favorites,id]:favorites.filter((el)=>el!==id))
         setIsFav(!isFav)
     }
-    function onClickTrailerhandle(){
-        const trailerKey=videos?.results[1].key;
-        const trailerUrl=`https://www.youtube.com/watch?v=${trailerKey}`;
-        window.open(trailerUrl,'_blank')
-        console.log(trailerKey,trailerUrl)
-    }
+    // function onClickTrailerhandle(){
+    //     const trailerKey=videos?.results[1].key;
+    //     const trailerUrl=`https://www.youtube.com/watch?v=${trailerKey}`;
+    //     window.open(trailerUrl,'_blank')
+    //     console.log(trailerKey,trailerUrl)
+    // }
   return (
     <div className={styles.detail_wrapper}>
         {/* <p>{film.id}</p> */}

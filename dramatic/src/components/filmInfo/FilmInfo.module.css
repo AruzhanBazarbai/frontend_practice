@@ -26,13 +26,13 @@
     color: #FFFFFF;
 }
 
-.actors_info{
+/* .actors_info{
     display: flex;
    justify-content: space-between;
     flex-direction: column;
-}
+} */
 
-.actors{
+/* .actors{
     display: grid;
     grid-template-columns: repeat(5,1fr);
     gap: 20px;
@@ -41,12 +41,12 @@
 }
 .actors_info >p{
     font-family: 'Montserrat';
-font-style: normal;
-font-weight: 700;
-font-size: 18px;
-line-height: 22px;
-/* identical to box height */
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
 
 
-color: #FFFFFF;
-}
+    color: #FFFFFF;
+} 
+*/

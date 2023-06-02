@@ -8,3 +8,5 @@ export {default as TitleFilm} from './titleFilm/TitleFilm';
 export {default as FilmPage} from './filmPage/FilmPage';
 export {default as FilmInfo} from './filmInfo/FilmInfo';
 export {default as ActorDetail} from './actorDetail/ActorDetail';
+export {default as ActorList} from './actorList/ActorList';
+export {default as VideoDetail} from './videoPage/VideoPage';
