@@ -1,0 +1,39 @@
+1. tailwind, 
+ 2. переписать todo на tailwind, ts
+ 3. под все экраны
+ 4. не использовать БЭМ
+
+ 1. подключить router
+ 2. использовать для навигации роутер в todo
+
+
+ 1. redux toolkit, tailwind, react, ts, router, useEffect, useState, запросы с публичных API
+ 2. написать приложение и использовать хедер сверху - на мобильных экранах должен быть бургер-меню, 
+ 3. использовать flexbox/grid
+
+ 1. задача на использование local Storage
+
+
+- 20 задач на литкод или кодварс (строки, числа, циклы, hash table, math, sorting, recursion)
+
+Теория:
+- Atomic design
+- dependencies, dev dependencies
+- tailwind config
+- асинхронные операции (async await, promise, promise all)
+- ajax
+- next js
+- маршрутизация в next js
+- http/ https
+- git (git pull, git checkout, git fetch, git commit, git branch, git delete, git push, git merge/git rebase, git clone)
+- firebase
+
+
+Ключ API (v3 auth)
+03418ae22c6ea93bf35ffcd15bf43e5d
+
+Пример API-запроса
+https://api.themoviedb.org/3/movie/550?api_key=03418ae22c6ea93bf35ffcd15bf43e5d
+
+Ключ доступа к API (v4 auth)
+eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwMzQxOGFlMjJjNmVhOTNiZjM1ZmZjZDE1YmY0M2U1ZCIsInN1YiI6IjY0NjNlZDE3ODgwYzkyMDBlMjE0YzExOCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.yaefUbiM83W6PFhcrY4Of03jEy4zbEsTcPBtQAtmZGw

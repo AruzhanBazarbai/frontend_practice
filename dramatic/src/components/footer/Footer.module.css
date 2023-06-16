@@ -1,0 +1,39 @@
+.footer_wrapper{
+    /* margin-top: 500px; */
+    height: 429px;
+    background: #161214;
+    color: white;
+    padding: 30px 50px 0;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 30px;
+    text-align: start;
+}
+.main_wrapper{
+    display: flex;
+    justify-content: space-around;
+
+}
+.input{
+    padding-top: 20px;
+}
+.input > select{
+    
+    color:white;
+    background-color: gray;
+    padding:5px 10px;
+}
+.input > select >option{
+    padding: 15px 5px;
+}
+.soc_net > div{
+    display: flex;
+    align-items: center;
+}
+.secondary_wrapper{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}

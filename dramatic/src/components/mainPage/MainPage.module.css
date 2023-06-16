@@ -1,0 +1,43 @@
+.body{
+    background: rgba(0,0,0,0.9);
+
+}
+.main_wrapper{
+    padding: 103px 0px 0px 100px;
+    /* margin-top: 200px; */
+    z-index: 100;
+    width: 100%;
+
+}
+.button_wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin: 30px; */
+}
+.button{
+
+    /* padding: 20px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #5E47A1;
+    border-radius: 21.5px;
+    width: 181px;
+    height: 43px;
+    
+}
+.button > button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background: none;
+    border:none;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+
+    color: #E3E3E3;
+}

@@ -1,0 +1,20 @@
+.navbar_wrapper{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-left: 20px;
+
+    width: 77px;
+    height: 315px;
+    left: -32px;
+    top: 125px;
+
+    background: linear-gradient(2.87deg, #130B29 9.89%, #5436A9 100%, #5E47A1 100%);
+    border-radius: 26px;
+    
+}
+/* .navbar_wrapper > *{
+    margin: ;
+} */

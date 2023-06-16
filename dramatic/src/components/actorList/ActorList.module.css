@@ -1,0 +1,51 @@
+.actors_wrapper{
+    display: flex;
+   justify-content: space-between;
+    flex-direction: column;
+}
+.actors{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 20px;
+    column-gap: 60px;
+}
+.actors_wrapper >p{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+}
+.button_wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+}
+.button{
+
+    /* padding: 20px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #5E47A1;
+    border-radius: 21.5px;
+    width: 181px;
+    height: 43px;
+    
+}
+.button > button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background: none;
+    border:none;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+
+    color: #E3E3E3;
+}
