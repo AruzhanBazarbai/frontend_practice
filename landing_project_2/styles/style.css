@@ -144,7 +144,67 @@ html{
     padding: 0 0 206px 0;
 }
 /* ---------FOOTER------------------------------------- */
+.footer{
+    background-color: #17213C;
+    color: white;
+}
+.footer__container{
 
+}
+.footer__body{
+    padding: 50px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.footer__column{
+    flex: 1 0 20%;
+}
+.footer__label{
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: 0.1px;
+    margin: 0 0 20px 0;
+}
+.footer__menu_item{
+    margin: 0 0 10px 0;
+    white-space: nowrap;
+}
+.footer__menu_item > img{
+    width: 24px;
+    height: auto;
+    margin:0 10px 0 0;
+}
+.footer__menu_link{
+    color: inherit;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 171.429%;
+    letter-spacing: 0.2px;
+}
+.footer__menu_link:hover{
+    text-decoration: underline;
+}
+@media screen and (max-width:992px){
+    .footer__body{
+        flex-wrap: wrap;
+        /* flex-direction: column; */
+        padding: 50px;
+    }
+    .footer__column{
+        flex: 1 0 50%;
+    }
+    .footer__column:not(:last-child){
+        margin:0 0  20px 0;
+    }
+}
+@media screen and (max-width:767px){
+    .footer__column{
+        flex: 1 0 100%;
+    }
+}
 /* -------HEADER-BLOCK---------------------------------- */
 .header-block{
     text-align: center;
@@ -429,15 +489,16 @@ html{
 }
 /* -------RAGE-WHO-WE-ARE------------------------------ */
 .whoweare__header{
-    margin:0 0 100px 0;
+    margin: 0 0 100px 0;
 }
 .whoweare__container{
-    padding:20px 0 0 0;
+    padding: 20px 0 0 0;
 }
 .whoweare__content_wrapper{
     flex: 1 1 auto; 
     display: flex;
     flex-direction: column;
+    margin: 0 0 50px 0;
 }
 .whoweare__content_wrapper > *:not(:last-child){
     margin: 0 0 30px 0;
@@ -446,6 +507,8 @@ html{
     display: flex;
     position: relative;
     justify-content: space-between;
+    align-items: flex-start;
+
 }
 .whoweare__video{
     flex:0 0 57%;
@@ -490,4 +553,312 @@ html{
 }
 .whoweare__item:not(:last-child){
     margin: 0 0 30px;
+}
+@media screen and (max-width: 1080px){
+    .whoweare__video{
+        margin-right: 50px;
+    }
+}
+@media screen and (max-width: 950px){
+    .whoweare__video{
+        padding: 0 0 56.25% 0;
+        margin-right: 50px;
+    }
+    .whoweare__body{
+        flex-direction: column-reverse;
+        align-items: stretch;
+        padding: 0 50px;
+    }
+}
+/* ------------clients---block----------------- */
+.clients{
+    padding: 58px;
+}
+.clients__items{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.client__item{
+    padding: 8 15px;
+    flex: 0 1 16.6667%;
+    text-align: center;
+    min-width: 140px;
+}
+.client__item img{
+    max-width: 100%;
+}
+@media screen and (max-width:992px) {
+    .client__item{
+        margin: 0 0 50px 0;
+    }
+}
+/* --------------------subscribe-form--------------------- */
+.page__subscribe{
+    padding: 0 0 20px 0;
+    position: relative;
+}
+.page__subscribe::after{
+    content: "";
+    background: #252B42;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 77px;
+}
+.subscribe__container{
+
+}
+.subscribe__body{
+    position: relative;
+    z-index: 2;
+    margin: 0px 30px;
+    padding: 30px 40px 30px 50px;
+    border-radius: 2px;
+    background-color: #17213C;
+    align-items: center;
+}
+.subscribe__title{
+    flex: 0 1 50%; 
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 133%;
+    letter-spacing: 0.1px;
+    color: white;
+}
+.subscribe__form{
+    flex: 0 1 50%; 
+    display: flex;
+    align-items: center;
+}
+.subscribe__input{
+    flex: 1 1 100%;
+    padding: 15px 20px;
+    border-radius: 5px 0 0 5px;
+    border: 1px solid #E6E6E6;
+    border-right: 0;
+    background: #F9F9F9;
+    display: flex;
+    align-items: center;
+    color: #737373;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 200%;
+    letter-spacing: 0.2px;
+}
+.subscribe__input::placeholder{
+    color: #737373;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 200%;
+    letter-spacing: 0.2px;
+    
+}
+.subscribe__button{
+    padding: 15px 22.5px;
+    justify-content: center;
+    align-items: center;
+    /* flex-shrink: 0; */
+    border-radius: 0px 5px 5px 0px;
+    border: 1px solid #E6E6E6;
+    background: #FF7B47;
+    color: #FFF;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 200%;
+    letter-spacing: 0.2px;
+    text-align: center;
+}
+@media screen and (min-width: 1070px) {
+    .subscribe__body{
+        margin: 0 30px;
+    }
+}
+@media screen and (min-width: 810px) {
+    .subscribe__title{
+        max-width: 266px;
+    }
+    .subscribe__body{
+        display: flex;
+        justify-content: space-between;
+    }
+    /* max-width: 450px; */
+}
+@media screen and (max-width: 810px) {
+    .subscribe__title{
+        margin: 0 0 20px 0;
+    }
+    .subscribe__body{
+        margin: 0 -15px;
+        padding: 20px 15px;
+    }
+}
+/* ----------get-in-touch-------------------- */
+.getintouch{
+    padding: 80px 33px 148px;
+}
+.getintouch__container{
+
+}
+.getintouch__header{
+    margin: 0 0 80px 0;
+}
+.getintouch__item{
+    flex: 0 1 33.333%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    padding: 50px 15px;
+}
+.getintouch__item > *:not(:last-child){
+    margin: 0 0 15px 0;
+}
+.getintouch__item-icon{
+    
+}
+.getintouch__item-icon > img{
+    width: 100%;
+}
+.getintouch__item-emails{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.getintouch__item-email, .getintouch__item-button{
+    color:#252B42;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 171.429% ;
+    letter-spacing: 0.2px;
+    
+}
+.getintouch__item-email{
+    color: inherit;
+}
+.getintouch__item-email:hover{
+    text-decoration: underline;
+}
+.getintouch__item-label{
+    color: #252B42;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: 0.1px;
+}
+.getintouch__item-button{
+    color: #FF7B47;
+    border-radius: 5px;
+    border: 1px solid var(--primary-color, #FF7B47);
+    padding: 10px 20px;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+}
+.getintouch__item-button:hover{
+    background-color: #FF7B47;
+    color: white;
+}
+.getintouch__item_active{
+    padding: 80px 15px;
+    background-color: #252B42;
+    
+}
+.getintouch__item_active > *{
+    color: white;
+}
+.getintouch__item_active .getintouch__item-button{
+    border-color: white;
+}
+@media screen and (min-width: 992px) {
+    .getintouch__items{
+        display: flex;
+        align-items: center;
+    }
+}
+@media screen and (max-width: 992px) {
+    .getintouch__header{
+        margin: 0 0 50px 0;
+    }
+}
+/* -------contact------------ */
+.page__contact{
+    background-color: white;
+}
+.contact__container{
+
+}
+.contact__body{
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.contact__body > *:not(:last-child){
+    margin:0 0 20px 0;
+}
+.contact__content{
+    flex: 0 0 50%;
+}
+.contact__content> *:not(:last-child){
+    padding:0 0 10px 0;
+}
+.contact__title{
+    color: #252B42;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 133.33%;
+    letter-spacing: 0.1px;
+}
+.contact__sub-title{
+    color: #737373;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 142.857%;
+    letter-spacing: 0.2px;
+}
+.contact__button{
+    max-height: 58px;
+    color: white;
+    padding: 15px 40px;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 200%;
+    letter-spacing: 0.2px;
+    border-radius: 5px;
+    background:  #FF7B47;
+    cursor: pointer;
+}
+@media screen and (min-width: 992px) {
+    .contact__body{
+        flex-direction: row;
+        justify-content: space-between; 
+    }
+    .contact__content{
+        text-align: start;
+    }
+}
+@media screen and (max-width: 992px) {
+    .contact__content{
+        text-align: center;
+    }
 }
